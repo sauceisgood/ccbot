@@ -1,4 +1,4 @@
-# examined dashezup's vcbot repo for make this
+# examined dashezup's vcbot repo for make this working only for contacts and userbot!
 import os
 from pytgcalls import GroupCall
 import ffmpeg
@@ -12,6 +12,14 @@ api_id=Config.API_ID
 api_hash=Config.API_HASH
 session_name=Config.STRING_SESSION
 app = Client(session_name, api_id, api_hash)
+
+self_or_contact_filter = filters.create(
+    lambda
+    _,
+    __,
+    message:
+    (message.from_user and message.from_user.is_contact) or message.outgoing
+)
 
 @app.on_message(filters.command('play') & self_or_contact_filter)
 async def play_track(client, message):
