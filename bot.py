@@ -8,7 +8,10 @@ from pyrogram import filters, Client
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'downloads/vcbot/'
 
-app = Client(STRING_SESSION, API_ID, API_HASH)
+api_id=Config.API_ID
+api_hash=Config.API_HASH
+session_name=Config.STRING_SESSION
+app = Client(session_name, api_id, api_hash)
 
 @app.on_message(filters.command('play'))
 async def play_track(client, message):
