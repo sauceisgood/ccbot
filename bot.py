@@ -36,7 +36,7 @@ async def play_track(client, message):
     else:
         try:
             group_call = GroupCall(client, input_filename)
-            await group_call.start(message.chat.id, False)
+            await group_call.start(message.chat.id)
         except RuntimeError:
             await message.reply('Group Call doesnt exist')
             return
@@ -64,7 +64,7 @@ async def join_voice_chat(client, message):
     chat_id = message.chat.id
     try:
         group_call = GroupCall(client, input_filename)
-        await group_call.start(chat_id, False)
+        await group_call.start(chat_id)
     except RuntimeError:
         await message.reply('lel error!')
         return
