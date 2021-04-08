@@ -49,7 +49,7 @@ async def stop_playing(_, message):
     group_call = VOICE_CHATS[message.chat.id]
     group_call.stop_playout()
     os.remove('downloads/vcbot/input.raw')
-    await mesaage.reply('Stopped Playing...')
+    await message.reply('Stopped Playing...')
 
 
 @app.on_message(filters.command('joinvc'))
