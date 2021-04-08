@@ -3,7 +3,7 @@ import os
 from pytgcalls import GroupCall
 import ffmpeg
 from config import Config
-from pyrogram import filters, Client
+from pyrogram import filters, Client, idle
 
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'downloads/vcbot/'
@@ -82,3 +82,6 @@ async def leave_voice_chat(client, message):
 
 app.start()
 print('>>> JEVC USERBOT STARTED')
+idle()
+app.stop()
+print('\n>>> JEVC USERBOT STOPPED')
