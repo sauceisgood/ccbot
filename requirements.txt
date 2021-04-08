@@ -2,3 +2,4 @@ pyrogram
 pytgcalls
 asyncio
 tgcrypto
+ffmpeg-python
