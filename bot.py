@@ -7,6 +7,8 @@ import ffmpeg
 from config import Config
 from datetime import datetime
 from pyrogram import filters, Client, idle
+import requests
+import wget
 
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'downloads/vcbot/'
@@ -16,6 +18,7 @@ api_hash=Config.API_HASH
 session_name=Config.STRING_SESSION
 app = Client(session_name, api_id, api_hash)
 
+# userbot and contacts filter by dashezup's tgvc-userbot
 self_or_contact_filter = filters.create(
     lambda
     _,
@@ -24,15 +27,50 @@ self_or_contact_filter = filters.create(
     (message.from_user and message.from_user.is_contact) or message.outgoing
 )
 
+# get args for saavn download
+def get_arg(message):
+    msg = message.text
+    msg = msg.replace(" ", "", 1) if msg[1] == " " else msg
+    split = msg[1:].replace("\n", " \n").split(" ")
+    if " ".join(split[1:]).strip() == "":
+        return ""
+    return " ".join(split[1:])
 
+# ping checker
 @app.on_message(filters.command('ping') & self_or_contact_filter)
 async def ping(client, message):
     start = datetime.now()
-    tauk = await message.reply("`Pong!`")
+    tauk = await message.reply('Pong!')
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await tauk.edit(f"**Pong!**\n> `{m_s} ms`")
+    await tauk.edit(f'**Pong!**\n> `{m_s} ms`')
 
+# jiosaavn song download
+@app.on_message(filters.command('saavn') & self_or_contact_filter)
+async def song(client, message):
+    message.chat.id
+    message.from_user["id"]
+    args = get_arg(message) + " " + "song"
+    if args.startswith(" "):
+        await message.reply("What's the song you want 🧐")
+        return ""
+    pak = await message.reply('Downloading...')
+    try:
+        # @ImJanindu <Infinity BOTs>
+        r = requests.get(f"https://jevcplayerbot-saavndl.herokuapp.com/result/?query={args}")
+    except Exception as e:
+        await pak.edit(str(e))
+        return
+    sname = r.json()[0]["song"]
+    slink = r.json()[0]["media_url"]
+    ssingers = r.json()[0]["singers"]
+    file = wget.download(slink)
+    ffile = file.replace("mp4", "m4a")
+    os.rename(file, ffile)
+    await pak.edit('Uploading...')
+    await message.reply_audio(audio=ffile, title=sname, performer=ssingers)
+    os.remove(ffile)
+    await pak.delete()
 
 @app.on_message(filters.command('play') & self_or_contact_filter)
 async def play_track(client, message):
@@ -70,7 +108,7 @@ async def stop_playing(_, message):
     group_call = VOICE_CHATS[message.chat.id]
     group_call.stop_playout()
     os.remove('downloads/vcbot/input.raw')
-    await message.reply('Stopped Playing...')
+    await message.reply('Stopped Playing ❌')
 
 
 @app.on_message(filters.command('joinvc') & self_or_contact_filter)
@@ -80,7 +118,7 @@ async def join_voice_chat(client, message):
         'input.raw',
     )
     if message.chat.id in VOICE_CHATS:
-        await message.reply('Already joined to Voice Chat')
+        await message.reply('Already joined to Voice Chat 🛠')
         return
     chat_id = message.chat.id
     try:
