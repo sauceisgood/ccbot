@@ -12,10 +12,12 @@
 
 ### Commands
 
+- `/ping` - check ping
 - `/play` - reply to mp3 file to play music
 - `/joinvc` - force join userbot to the voice chat
 - `/leavevc` - force leave userbot from voice chat
 - `/stopvc` - stop playing music on voice chat
+- `/saavn <song name> - download songs from JioSaavn
 
 > All the commands work for userbot and its contacts
 
