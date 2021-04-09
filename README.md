@@ -33,4 +33,8 @@
 
 - [ImJanindu](https://github.com/ImJanindu)
 
+### Support
+
+- [InfinityBots Support](https://t.me/InfinityBots_Support)
+
 ### Licensed under the GNU General Public License v3.0
