@@ -1,12 +1,19 @@
 ## JEVC Player 🎵
 
-#### A simple voice chat play userbot
+#### A simple voice chat music play userbot
 
 - Simple and stable
 - No time duration limits
 - High quality sounds
 - Queue not available
 - Sudo users (userbot and contacts)
+- One userbot works only on one group
+
+### Commands
+
+- `/play` - reply to mp3 file to play music
+- `/joinvc` - force join userbot to the voice chat (No need to run this command, when do `/play` userbot automatically join to the voice chat)
+- `/leavevc` - force leave userbot from voice chat
 
 ### Host Bot
 
