@@ -1,4 +1,6 @@
-# examined dashezup's vcbot repo for make this working only for contacts and userbot!
+# Examined dashezup's vcbot repo for make this working only for contacts and userbot!
+# Infinity BOTs <https://t.me/Infinity_BOTs>
+
 import os
 from pytgcalls import GroupCall
 import ffmpeg
