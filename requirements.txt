@@ -3,3 +3,5 @@ pytgcalls
 asyncio
 tgcrypto
 ffmpeg-python
+requests
+wget
