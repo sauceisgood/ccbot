@@ -53,7 +53,7 @@ async def play_track(client, message):
     ).overwrite_output().run()
     os.remove(audio_original)
     if VOICE_CHATS and message.chat.id in VOICE_CHATS:
-        text = (f'Playing **{audio.title}** here by JEVC BOT...',
+        await a.edit(f'Playing **{audio.title}** here by JEVC BOT...',
                 reply_markup=keyboard)
     else:
         try:
