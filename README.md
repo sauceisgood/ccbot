@@ -5,7 +5,12 @@
 - Simple and stable
 - No time duration limits
 - High quality sounds
+- Queue not available
 - Sudo users (userbot and contacts)
+
+### Host Bot
+
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ImJanindu/vcplayerbot)
 
 ### Credits
 
