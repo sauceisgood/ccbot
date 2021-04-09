@@ -5,7 +5,7 @@
 - Simple and stable
 - No time duration limits
 - High quality sounds
-- Sudo users (userbot and contacts)
+- Sudo users (userbot and it's contacts)
 - One userbot works only in one group
 
 × Currently queue is not available
