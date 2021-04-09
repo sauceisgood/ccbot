@@ -22,4 +22,4 @@
 
 - [ImJanindu](https://github.com/ImJanindu)
 
-### License [Here](https://github.com/ImJanindu/vcplayerbot/blob/7fe6f278887a0d5d926253ab1ac0b163fadfa6d0/LICENSE)
+### Licensed under the GNU General Public License v3.0
