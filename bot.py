@@ -5,6 +5,7 @@ import os
 from pytgcalls import GroupCall
 import ffmpeg
 from config import Config
+from datetime import datetime
 from pyrogram import filters, Client, idle
 
 VOICE_CHATS = {}
@@ -22,6 +23,15 @@ self_or_contact_filter = filters.create(
     message:
     (message.from_user and message.from_user.is_contact) or message.outgoing
 )
+
+
+@app.on_message(filters.command('ping') & self_or_contact_filter)
+async def ping(client, message):
+    start = datetime.now()
+    tauk = await message.reply("`Pong!`")
+    end = datetime.now()
+    m_s = (end - start).microseconds / 1000
+    await tauk.edit(f"**Pong!**\n> `{m_s} ms`")
 
 
 @app.on_message(filters.command('play') & self_or_contact_filter)
