@@ -5,7 +5,7 @@
 - Simple and stable
 - No time duration limits
 - High quality sounds
-- Sudo users (userbot and it's contacts)
+- Sudo users (userbot and its contacts)
 - One userbot works only in one group
 
 × Currently queue is not available
@@ -17,7 +17,7 @@
 - `/leavevc` - force leave userbot from voice chat
 - `/stopvc` - stop playing music on voice chat
 
-> All the commands work for userbot and it's contacts
+> All the commands work for userbot and its contacts
 
 ### Host Bot
 
