@@ -13,7 +13,7 @@
 ### Commands
 
 - `/play` - reply to mp3 file to play music
-- `/joinvc` - force join userbot to the voice chat (No need to run this command, when do `/play` userbot automatically join to the voice chat)
+- `/joinvc` - force join userbot to the voice chat
 - `/leavevc` - force leave userbot from voice chat
 - `/stopvc` - stop playing music on voice chat
 
