@@ -4,6 +4,7 @@ from pytgcalls import GroupCall
 import ffmpeg
 from config import Config
 from pyrogram import filters, Client, idle
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'downloads/vcbot/'
@@ -20,6 +21,18 @@ self_or_contact_filter = filters.create(
     message:
     (message.from_user and message.from_user.is_contact) or message.outgoing
 )
+
+keyboard = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Channel",
+                            url="https://t.me/Infinity_BOTs")
+
+                    ]
+                ]
+            )
+
 
 @app.on_message(filters.command('play') & self_or_contact_filter)
 async def play_track(client, message):
@@ -49,7 +62,8 @@ async def play_track(client, message):
             await message.reply('Group Call doesnt exist')
             return
         VOICE_CHATS[message.chat.id] = group_call
-    await a.edit(f'Playing **{audio.title}** here by JEVC BOT...')
+    await a.edit(f'Playing **{audio.title}** here by JEVC BOT...',
+         reply_markup=keyboard)
 
 
 @app.on_message(filters.command('stopvc') & self_or_contact_filter)
