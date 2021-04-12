@@ -5,3 +5,5 @@ tgcrypto
 ffmpeg-python
 requests
 wget
+aiohttp
+aiofiles
