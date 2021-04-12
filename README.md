@@ -30,6 +30,7 @@
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [Tgcalls](https://github.com/MarshalX/tgcalls)
 - [tgvc-userbot](https://github.com/callsmusic/tgvc-userbot)
+- [William Butcher Bot](https://github.com/thehamkercat/WilliamButcherBot)
 
 ### Devs
 
