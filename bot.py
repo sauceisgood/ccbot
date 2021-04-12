@@ -52,6 +52,11 @@ def get_arg(message):
         return ""
     return " ".join(split[1:])
 
+# start message
+@app.on_message(filters.command('start'))
+async def start(client, message):
+    await message.reply('Heya, I'm JEVC Player 🎵\n\nRepo > https://github.com/ImJanindu/vcplayerbot')
+
 # ping checker
 @app.on_message(filters.command('ping') & self_or_contact_filter)
 async def ping(client, message):
