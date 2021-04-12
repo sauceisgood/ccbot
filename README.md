@@ -12,6 +12,7 @@
 
 ### Commands
 
+- `/start` - check bot is alive
 - `/ping` - check ping
 - `/play` - reply to mp3 file to play music
 - `/joinvc` - force join userbot to the voice chat
