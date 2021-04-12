@@ -16,7 +16,7 @@ import aiofiles
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'downloads/vcbot/'
 
-# deezer download web of willum butcher bot
+# deezer download web of william butcher bot
 ARQ = "https://thearq.tech/"
 
 api_id=Config.API_ID
@@ -98,7 +98,7 @@ async def download_song(url):
                 await f.close()
     return song_name
 
-# deezer download by willum butcher bot
+# deezer download by william butcher bot
 @app.on_message(filters.command("deezer") & self_or_contact_filter)
 async def deezer(_, message):
     if len(message.command) < 2:
