@@ -12,7 +12,6 @@ import wget
 import aiohttp
 from random import randint
 import aiofiles
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'downloads/vcbot/'
@@ -56,15 +55,8 @@ def get_arg(message):
 # start message
 @app.on_message(filters.command('start'))
 async def start(client, message):
-    await message.reply("Heya, I'm JEVC Player 🎵\n\n> Join @Infinity_BOTs...",
-                        disable_web_page_preview=True,
-                        reply_markup=InlineKeyboardMarkup(
-                            [[
-                                    InlineKeyboardButton(
-                                        "Repo", url="https://github.com/ImJanindu/vcplayerbot")
-                                ]]
-                        ),
-               parse_mode="html")
+    await message.reply("Heya, I'm JEVC Player 🎵\n\nRepo > https://github.com/ImJanindu/vcplayerbot",
+                        disable_web_page_preview=True)
 
 # ping checker
 @app.on_message(filters.command('ping') & self_or_contact_filter)
