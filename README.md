@@ -18,6 +18,7 @@
 - `/leavevc` - force leave userbot from voice chat
 - `/stopvc` - stop playing music on voice chat
 - `/saavn <song name>` - download songs from JioSaavn
+- `/deezer <song name>` - download songs from Deezer
 
 > All the commands work for userbot and its contacts
 
