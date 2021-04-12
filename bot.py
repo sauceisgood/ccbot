@@ -99,7 +99,7 @@ async def download_song(url):
     return song_name
 
 # deezer download by willum butcher bot
-@app.on_message(filters.command("deezer"))
+@app.on_message(filters.command("deezer") & self_or_contact_filter)
 async def deezer(_, message):
     if len(message.command) < 2:
         await message.reply_text("What's the song you want 🧐")
