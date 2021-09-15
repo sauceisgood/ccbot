@@ -30,8 +30,7 @@ self_or_contact_filter = filters.create(
 # start message
 @app.on_message(filters.command('start'))
 async def start(client, message):
-    await message.reply("Heya, I'm JEVC Player 🎵\n\nRepo > https://github.com/ImJanindu/vcplayerbot",
-                        disable_web_page_preview=True)
+    await message.reply("**Heya, I'm JEVC Player 🎵**")
 
 # ping checker
 @app.on_message(filters.command('ping') & self_or_contact_filter)
