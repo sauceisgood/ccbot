@@ -26,10 +26,6 @@
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [tgcalls](https://github.com/MarshalX/tgcalls)
 
-### Devs
+### [Dev](https://github.com/ImJanindu)
 
-- [ImJanindu](https://github.com/ImJanindu)
-
-### Support
-
-- [Infinity Bots](https://t.me/InfinityBots_Support)
+### [Support](https://t.me/InfinityBots_Support)
