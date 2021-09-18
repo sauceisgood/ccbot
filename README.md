@@ -5,9 +5,9 @@
 - Simple and stable
 - No time duration limits
 - High quality sounds
-- Sudo users (userbot itself and its contacts)
 - Works only in one group
 - No queue
+- Commands allowed for userbot and contacts
 
 ### Commands
 
