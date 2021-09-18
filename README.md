@@ -20,7 +20,7 @@
 - `/stopvc` - stop playing music on voice chat
 
 ### Pyrogram String Session
-- [String session here](https://replit.com/@SpEcHiDe/GenerateStringSession)
+- [Get String Session](https://replit.com/@SpEcHiDe/GenerateStringSession)
 
 ### Credits
 
