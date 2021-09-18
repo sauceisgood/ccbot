@@ -6,9 +6,9 @@
 - No time duration limits
 - High quality sounds
 - Sudo users (userbot and its contacts)
-- One userbot works only in one group
+- Works only in one group
 
-× Currently queue is not available
+× Queue is not available
 
 ### Commands
 
@@ -40,6 +40,4 @@
 
 ### Support
 
-- [InfinityBots Support](https://t.me/InfinityBots_Support)
-
-### Licensed under the GNU General Public License v3.0
+- [Infinity Bots](https://t.me/InfinityBots_Support)
