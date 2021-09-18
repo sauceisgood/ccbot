@@ -60,7 +60,7 @@ async def play_track(client, message):
     ).overwrite_output().run()
     os.remove(audio_original)
     if VOICE_CHATS and message.chat.id in VOICE_CHATS:
-        text = f'▶️ Playing **{audio.title}** at **{chat.title}** by JEVC Player...'
+        text = f'▶️ Playing **{audio.title}** at **{message.chat.title}** by JEVC Player...'
     else:
         try:
             group_call = GroupCall(client, input_filename)
@@ -69,7 +69,7 @@ async def play_track(client, message):
             await message.reply('Group Call doesnt exist')
             return
         VOICE_CHATS[message.chat.id] = group_call
-    await a.edit(f'▶️ Playing **{audio.title}** at **{chat.title}** by JEVC Player...')
+    await a.edit(f'▶️ Playing **{audio.title}** at **{message.chat.title}** by JEVC Player...')
 
 
 @app.on_message(filters.command('stopvc') & self_or_contact_filter)
