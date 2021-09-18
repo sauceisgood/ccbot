@@ -19,8 +19,6 @@
 - `/leavevc` - force leave userbot from voice chat
 - `/stopvc` - stop playing music on voice chat
 
-> All the commands work for userbot and its contacts
-
 ### Host Bot
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ImJanindu/vcplayerbot)
