@@ -7,8 +7,7 @@
 - High quality sounds
 - Sudo users (userbot and its contacts)
 - Works only in one group
-
-× Queue is not available
+- No queue
 
 ### Commands
 
