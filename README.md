@@ -19,17 +19,13 @@
 - `/leavevc` - force leave userbot from voice chat
 - `/stopvc` - stop playing music on voice chat
 
-### Host Bot
-
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ImJanindu/vcplayerbot)
-
 ### Pyrogram String Session
 - [String session here](https://replit.com/@SpEcHiDe/GenerateStringSession)
 
 ### Credits
 
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
-- [Tgcalls](https://github.com/MarshalX/tgcalls)
+- [tgcalls](https://github.com/MarshalX/tgcalls)
 - [tgvc-userbot](https://github.com/callsmusic/tgvc-userbot)
 
 ### Devs
