@@ -1,5 +1,4 @@
-# Examined dashezup's vcbot repo for make this working only for contacts and userbot it self
-# Infinity BOTs <https://t.me/Infinity_BOTs>
+# VC PLAYER TG
 
 import os
 from pytgcalls import GroupCall
@@ -28,9 +27,9 @@ self_or_contact_filter = filters.create(
 
 
 # start message
-@app.on_message(filters.command('start'))
+@app.on_message(filters.command('start') & self_or_contact_filter)
 async def start(client, message):
-    await message.reply("**Heya, I'm JEVC Player 🎵**")
+    await message.reply("**Heya, I'm JEVC Player is online 🎵**")
 
 # ping checker
 @app.on_message(filters.command('ping') & self_or_contact_filter)
@@ -61,7 +60,7 @@ async def play_track(client, message):
     ).overwrite_output().run()
     os.remove(audio_original)
     if VOICE_CHATS and message.chat.id in VOICE_CHATS:
-        text = f'▶️ Playing **{audio.title}** here by JEVC BOT...'
+        text = f'▶️ Playing **{audio.title}** at **{chat.title}** by JEVC Player...'
     else:
         try:
             group_call = GroupCall(client, input_filename)
@@ -70,7 +69,7 @@ async def play_track(client, message):
             await message.reply('Group Call doesnt exist')
             return
         VOICE_CHATS[message.chat.id] = group_call
-    await a.edit(f'▶️ Playing **{audio.title}** here by JEVC BOT...')
+    await a.edit(text)
 
 
 @app.on_message(filters.command('stopvc') & self_or_contact_filter)
@@ -95,7 +94,7 @@ async def join_voice_chat(client, message):
         group_call = GroupCall(client, input_filename)
         await group_call.start(chat_id)
     except RuntimeError:
-        await message.reply('lel error!')
+        await message.reply('Error ❌')
         return
     VOICE_CHATS[chat_id] = group_call
     await message.reply('Joined the Voice Chat ✅')
@@ -110,7 +109,7 @@ async def leave_voice_chat(client, message):
     await message.reply('Left Voice Chat ✅')
 
 app.start()
-print('>>> JEVC USERBOT STARTED')
+print('>>> JEVC PLAYER STARTED <<<')
 idle()
 app.stop()
-print('\n>>> JEVC USERBOT STOPPED')
+print('\n>>> JEVC PLAYER STOPPED <<<')
