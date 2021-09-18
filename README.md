@@ -26,7 +26,6 @@
 
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [tgcalls](https://github.com/MarshalX/tgcalls)
-- [tgvc-userbot](https://github.com/callsmusic/tgvc-userbot)
 
 ### Devs
 
