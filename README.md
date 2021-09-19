@@ -6,7 +6,6 @@
 - No time duration limits
 - High quality sounds
 - Works only in one group
-- No queue
 - Commands allowed for userbot and contacts
 
 ### Commands
